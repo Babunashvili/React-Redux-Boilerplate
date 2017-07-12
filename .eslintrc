@@ -1,0 +1,22 @@
+{
+    "extends": "airbnb",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "rules": {
+        "max-len": ["warn", 120],
+        "indent": ["warn", 2],
+        "react/jsx-indent": ["warn", 4],
+        "react/forbid-prop-types": 0,
+        "semi": [2, "never"],
+        "no-underscore-dangle": 0,
+        "no-console": 0,
+        "linebreak-style": 0
+    },
+    "globals": {
+        "localStorage": true
+    }
+}

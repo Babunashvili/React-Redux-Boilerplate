@@ -4,7 +4,8 @@
   "description": "React-Redux Boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.production.config.js --progress --profile --colors && cp -R ./src/app/resources/assets/files/* ./dist/files",
+    "dev": "webpack-dashboard -- webpack-dev-server --progress --profile --colors"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,60 @@
   "bugs": {
     "url": "https://github.com/david-babunashvili/React-Redux-Boilerplate/issues"
   },
-  "homepage": "https://github.com/david-babunashvili/React-Redux-Boilerplate#readme"
+  "homepage": "https://github.com/david-babunashvili/React-Redux-Boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-runtime": "^6.22.0",
+    "css-loader": "0.26.1",
+    "eslint": "^3.6.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "file-loader": "^0.10.0",
+    "image-webpack-loader": "^3.3.0",
+    "imports-loader": "^0.6.5",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^1.3.3",
+    "react-addons-test-utils": "^0.14.8",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^4.0.0",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "excel-loader": "^1.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "axios": "^0.16.2",
+    "babel-polyfill": "^6.22.0",
+    "classnames": "^2.2.5",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^v2.0.0-rc.1",
+    "html-webpack-plugin": "^2.26.0",
+    "immutable": "^3.8.1",
+    "moment": "^2.18.0",
+    "react": "15.3.0",
+    "react-addons-perf": "15.3.0",
+    "react-addons-test-utils": "15.3.0",
+    "react-addons-update": "15.3.0",
+    "react-dom": "15.3.0",
+    "react-redux": "^4.0.0",
+    "react-redux-multilingual": "^1.0.4",
+    "react-router": "^2.0.0-rc5",
+    "redux": "^3.0.4",
+    "redux-promise": "^0.5.3",
+    "redux-saga": "^0.14.2",
+    "uuid": "^3.0.1",
+    "webpack": "^2.2.1",
+    "webpack-cleanup-plugin": "^0.4.2",
+    "webpack-dashboard": "^0.3.0",
+    "webpack-dev-server": "^2.4.1"
+  }
 }
