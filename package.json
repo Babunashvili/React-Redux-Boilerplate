@@ -1,0 +1,25 @@
+{
+  "name": "react-redux-boilderplate",
+  "version": "1.0.0",
+  "description": "React-Redux Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-babunashvili/React-Redux-Boilerplate.git"
+  },
+  "keywords": [
+    "reactjs",
+    "redux",
+    "redux-saga",
+    "javascript"
+  ],
+  "author": "David Babunashvili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/david-babunashvili/React-Redux-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/david-babunashvili/React-Redux-Boilerplate#readme"
+}
