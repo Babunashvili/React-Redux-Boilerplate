@@ -4,8 +4,9 @@
   "description": "React-Redux Boilerplate",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.production.config.js --progress --profile --colors && cp -R ./src/app/resources/assets/files/* ./dist/files",
-    "start": "webpack-dashboard -- webpack-dev-server --progress --profile --colors"
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.production.config.js --progress --profile --colors",
+    "start": "webpack-dashboard -- webpack-dev-server --progress --profile --colors",
+    "start:node": "node  www.js"
   },
   "repository": {
     "type": "git",

@@ -6,9 +6,9 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
-const apiConfig = require(`./config/${process.env.NODE_ENV}`)
-const apiUrl = apiConfig.apiUrl
-const apiSocketUrl = apiConfig.apiSocketUrl
+// const apiConfig = require(`./config/${process.env.NODE_ENV}`)
+// const apiUrl = apiConfig.apiUrl
+// const apiSocketUrl = apiConfig.apiSocketUrl
 
 // loaders.push({
 //   test: /\.scss$/,
@@ -18,7 +18,9 @@ const apiSocketUrl = apiConfig.apiSocketUrl
 
 loaders.push({
   test: /\.scss$/,
-  loaders: ['style-loader', 'css-loader?importLoaders=1', 'sass-loader', 'postcss-loader'],
+  loaders: ['style-loader', 'css-loader?importLoaders=1', 'sass-loader',
+    'postcss-loader'
+  ],
   exclude: ['node_modules'],
 })
 
@@ -44,8 +46,8 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        apiUrl: JSON.stringify(apiUrl),
-        apiSocketUrl: JSON.stringify(apiSocketUrl),
+        // apiUrl: JSON.stringify(apiUrl),
+        // apiSocketUrl: JSON.stringify(apiSocketUrl),
       },
     }),
     new webpack.optimize.UglifyJsPlugin({
